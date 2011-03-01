@@ -1,6 +1,9 @@
 if [[ -n $SSH_CONNECTION ]]; then
+  autoload -U colors
+  colors
+
   export PS1='%{${fg[cyan]}%}%*%{${fg[white]}%} %# '
-    export RPROMPT='$(git_info_for_prompt) [%{${fg[green]}%}%3~%{${fg[white]}%} on %{${fg[magenta]}%}server%{${fg[white]}%}]'
+  export RPROMPT='$(git_info_for_prompt) [%{${fg[green]}%}%3~%{${fg[white]}%} on %{${fg[magenta]}%}server%{${fg[white]}%}]'
 else
   autoload -U colors
   colors
