@@ -43,6 +43,6 @@ if [ -n "$g" ]; then
   if [ -n "$1" ]; then
     printf "$1" "${b##refs/heads/}$r"
   else
-    printf "(%%{${fg[red]}%%}%s%%{${fg[white]}%%})" "${b##refs/heads/}$r"
+    printf "(%%{${fg[red]}%%}%s%%{${fg[black]}%%})" "${b##refs/heads/}$r"
   fi
 fi
